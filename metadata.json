@@ -1,0 +1,6 @@
+{
+  "name": "Economic Observatory",
+  "description": "Economics and financial intelligence platform for collecting, analyzing, and connecting global macroeconomic developments, policy decisions, and academic research.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

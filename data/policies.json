@@ -1,0 +1,93 @@
+[
+  {
+    "id": "policy-fed-balance-sheet-2026",
+    "jurisdiction": "United States",
+    "institution": "Federal Reserve / FOMC",
+    "title": "Policy on Balance Sheet Normalization and QT Tapering Schedule",
+    "announcementDate": "2026-11-04",
+    "consultationDate": "2026-09-18",
+    "adoptionDate": "2026-11-04",
+    "effectiveDate": "2026-12-01",
+    "status": "Enacted",
+    "previousPolicyVersion": "Principles for Reducing the Size of the Federal Reserve's Balance Sheet (May 2022)",
+    "targetedEconomicProblem": "Emergence of collateral frictions and volatility in overnight unsecured/secured interbank funding rates as ON RRP balances decline.",
+    "expectedTransmissionMechanisms": [
+      "Reduces the monthly drain of commercial bank deposits at the central bank.",
+      "Maintains reserves above the Lowest Comfortable Level of Reserves (LCLOR).",
+      "Lessens primary dealer capacity constraints in underwriting Treasury issuance."
+    ],
+    "winners": [
+      "Primary dealers",
+      "Money market funds",
+      "Regional banks with tighter liquidity ratios"
+    ],
+    "losers": [
+      "Investors seeking high duration concession premia on primary Treasury auctions"
+    ],
+    "unintendedConsequences": [
+      "Market misinterpretation as premature monetary easing, potentially loosen financial conditions counter to the 2% inflation target."
+    ],
+    "relatedStoryIds": [
+      "story-fed-qt-calibration-2026"
+    ],
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/bst_openmarketops.htm"
+  },
+  {
+    "id": "policy-tpi-monitoring",
+    "jurisdiction": "Eurozone",
+    "institution": "European Central Bank",
+    "title": "Transmission Protection Instrument (TPI) & Operational Corridor Framework",
+    "announcementDate": "2026-10-29",
+    "adoptionDate": "2026-10-29",
+    "effectiveDate": "2026-11-15",
+    "status": "Implemented",
+    "previousPolicyVersion": "ECB Operational Framework Review (March 2024)",
+    "targetedEconomicProblem": "Disorderly or unwarranted sovereign spread widening across member states that impairs the uniform transmission of monetary policy.",
+    "expectedTransmissionMechanisms": [
+      "Ex-ante deterrent against speculative shorting of peripheral sovereign debt (Italy, Spain, Greece).",
+      "Narrowed MRO-DFR corridor reduces price dispersion in secured and unsecured money markets."
+    ],
+    "winners": [
+      "Peripheral Eurozone sovereign treasuries",
+      "Euro area retail borrowers facing cross-border loan rates"
+    ],
+    "losers": [
+      "Hedge funds engaged in sovereign basis convergence trades"
+    ],
+    "unintendedConsequences": [
+      "Moral hazard regarding compliance with the EU Stability and Growth Pact fiscal deficit rules."
+    ],
+    "relatedStoryIds": [
+      "story-ecb-balance-sheet-2026"
+    ],
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.pr220721~971517170e.en.html"
+  },
+  {
+    "id": "policy-pboc-targeted-relending",
+    "jurisdiction": "China",
+    "institution": "People's Bank of China & NFRA",
+    "title": "Strategic Technological Innovation and Equipment Modernization Refinancing Program",
+    "announcementDate": "2026-11-07",
+    "effectiveDate": "2026-11-15",
+    "status": "Enacted",
+    "targetedEconomicProblem": "Sluggish private corporate capital expenditures and industrial supply chain vulnerabilities in semiconductor fabrication and robotics.",
+    "expectedTransmissionMechanisms": [
+      "PBOC extends low-cost (1.75%) credit lines to designated commercial banks specifically tied to validated corporate Capex contracts.",
+      "Reduces borrowing hurdle rates for high-tech manufacturing."
+    ],
+    "winners": [
+      "Advanced equipment manufacturers",
+      "Commercial state banks securing risk-cushioned credit volume"
+    ],
+    "losers": [
+      "Traditional residential property developers and non-strategic heavy manufacturing"
+    ],
+    "unintendedConsequences": [
+      "Potential industrial overcapacity in prioritized sub-sectors if domestic consumer absorption capacity lags."
+    ],
+    "relatedStoryIds": [
+      "story-china-pboc-liquidity-2026"
+    ],
+    "sourceUrl": "http://www.pbc.gov.cn/zhengcehuobisi/125207/index.html"
+  }
+]

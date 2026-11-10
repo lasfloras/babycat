@@ -1,0 +1,345 @@
+[
+  {
+    "id": "story-fed-qt-calibration-2026",
+    "headline": "Federal Reserve Moderates Balance Sheet Runoff Pace as Money Market Frictions Emerge",
+    "originalSource": "Federal Reserve Board Press Release & Statement on Balance Sheet Normalization",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261104a.htm",
+    "publicationDate": "2026-11-05",
+    "eventDate": "2026-11-04",
+    "jurisdiction": "United States",
+    "institutions": [
+      "Federal Reserve",
+      "Federal Open Market Committee (FOMC)",
+      "Federal Reserve Bank of New York Open Market Desk"
+    ],
+    "factualSummary": "The FOMC lowered the monthly redemption redemption cap on Treasury securities from $60 billion to $25 billion while maintaining the agency debt and agency mortgage-backed securities cap at $35 billion. The Standing Repo Facility (SRF) recorded minimum utilization, but overnight reverse repurchase agreement (ON RRP) facility balances settled under $120 billion, triggering staff recommendations to guard against cross-market liquidity strains.",
+    "classification": [
+      "Macroeconomics",
+      "Monetary economics",
+      "Banking and financial regulation"
+    ],
+    "mechanisms": [
+      "Monetary transmission",
+      "Credit transmission",
+      "Expectations and uncertainty",
+      "Capital allocation"
+    ],
+    "theoreticalFrameworks": [
+      "Ample Reserves Operating Framework (Keister & McAndrews, 2009)",
+      "Preferred Habitat Theory of the Term Structure (Vayanos & Vila, 2021)",
+      "Interbank Liquidity Hoarding Models (Acharya, Shin & Yorulmazer, 2011)"
+    ],
+    "economicMechanismsDetail": "By reducing the quantitative tightening (QT) runoff rate, the central bank preserves structural bank reserves inside the Federal Reserve system. As ON RRP buffers deplete, bank deposits and reserve balances become sensitive to Treasury General Account (TGA) cash fluctuations. Moderating the roll-off stabilizes the SOFR-IORB spread, averting a repeat of the September 2019 repo spike without signaling an impending easing of the benchmark federal funds rate target.",
+    "possibleImplications": {
+      "nearTerm": [
+        "Mitigates upward pressure on repo rates and Secured Overnight Financing Rate (SOFR) spikes around month-end settlement dates.",
+        "Reduces the volume of Treasury bill supply that the private dealer network must absorb at duration discounts."
+      ],
+      "structural": [
+        "Prolongs the ultimate size of the Federal Reserve balance sheet relative to nominal GDP (stabilizing around 18-20% of GDP).",
+        "Establishes a higher structural floor for the Lowest Comfortable Level of Reserves (LCLOR) across the US banking sector."
+      ]
+    },
+    "distributionalEffects": "Primary dealer balance sheets benefit from reduced inventory financing burdens; non-bank institutional lenders in repo markets face slight yield compression on overnight cash collateralization.",
+    "uncertaintyAndAlternatives": "Staff estimates of the banking system's aggregate lowest comfortable level of reserves remain imprecise. If commercial bank reserve demand is steeper than modeled due to Basel III liquidity coverage ratios (LCR), intraday liquidity strains may still surface prior to 2027.",
+    "academicResearchCitations": [
+      {
+        "paperTitle": "Liquidity, Leverage, and the Federal Reserve's Balance Sheet",
+        "authors": "Tobias Adrian and Hyun Song Shin",
+        "year": 2021,
+        "sourceOrJournal": "Journal of Economic Perspectives",
+        "keyFinding": "Dealer balance sheet capacity is non-linear in volatility; contraction in Fed reserves disproportionately impacts non-bank funding spreads."
+      },
+      {
+        "paperTitle": "Steering the Federal Reserve's Balance Sheet: Lessons from September 2019",
+        "authors": "Gara Afonso, Marco Cipriani, and Gabriele La Spada",
+        "year": 2023,
+        "sourceOrJournal": "Economic Policy Review",
+        "keyFinding": "Reserve dispersion across depository institutions is highly skewed, making aggregate reserve metrics misleading when measuring money market stress."
+      }
+    ],
+    "potentialResearchQuestions": [
+      "How does the elasticity of repo rates to net Treasury bill issuance shift when central bank reserve balances approach 8% of commercial bank assets?",
+      "Does QT taper alter the term premium independently of forward guidance regarding the policy rate?"
+    ],
+    "futureIndicatorsToWatch": [
+      "SOFR minus Interest on Reserve Balances (IORB) spread (bps)",
+      "Tri-Party Repo volumes and FICC Sponsored Service clearing rates",
+      "Treasury General Account (TGA) weekly balance variance"
+    ],
+    "significanceScore": 94,
+    "relatedStoryIds": [
+      "story-ecb-balance-sheet-2026",
+      "story-bis-fx-swap-liquidity-2026"
+    ],
+    "status": "analyzed"
+  },
+  {
+    "id": "story-ecb-balance-sheet-2026",
+    "headline": "European Central Bank Deploys Structural Refinancing Facility to Anchor Euribor Stability",
+    "originalSource": "ECB Press Release - Operational Framework for Implementing Monetary Policy",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp20261029.en.html",
+    "publicationDate": "2026-11-06",
+    "eventDate": "2026-11-05",
+    "jurisdiction": "Eurozone",
+    "institutions": [
+      "European Central Bank",
+      "Eurosystem",
+      "Single Supervisory Mechanism"
+    ],
+    "factualSummary": "The ECB Governing Council formalized the parameters of its new longer-term structural refinancing operations (SROs) and a structural portfolio of securities, narrowing the spread between the Main Refinancing Operations (MRO) rate and the Deposit Facility Rate (DFR) to 15 basis points. Full allotment against collateral was confirmed for short-term liquidity injections.",
+    "classification": [
+      "Monetary economics",
+      "Banking and financial regulation",
+      "International finance"
+    ],
+    "mechanisms": [
+      "Monetary transmission",
+      "Credit transmission",
+      "Price mechanisms",
+      "Information asymmetry"
+    ],
+    "theoreticalFrameworks": [
+      "Bagehot's Dictum on Central Banking Liquidity Provision",
+      "Corridor vs. Floor Monetary Operating Systems (Bindseil, 2016)",
+      "Sovereign-Bank Nexus in Fragmented Currency Unions (Brunnermeier et al., 2016)"
+    ],
+    "economicMechanismsDetail": "By tightening the corridor between the lending facility and deposit rate, the ECB reduces rate volatility as excess liquidity drains across the Eurosystem. The structural operations prevent uneven liquidity distribution among peripheral and core banks from creating artificial spread widening in unsecured interbank lending markets (€STR and Euribor).",
+    "possibleImplications": {
+      "nearTerm": [
+        "Constrains fragmentation risks in Spanish and Italian interbank borrowing costs.",
+        "Standardizes bank collateral eligibility criteria under updated green and sustainability hair-cuts."
+      ],
+      "structural": [
+        "Transitions the Eurosystem to a hybrid demand-driven floor system.",
+        "Reduces moral hazard by charging a market-linked benchmark rather than subsidized negative-rate refinancing (TLTRO-style)."
+      ]
+    },
+    "distributionalEffects": "Peripheral European banks with lower reliance on wholesale commercial paper gain more stable access to central liquidity; core northern European banks experience slightly lower surplus reserve deposit arbitrage yields.",
+    "uncertaintyAndAlternatives": "Critics argue that high structural reliance on ECB liquidity facilities may disincentivize private cross-border interbank integration across the European Banking Union.",
+    "academicResearchCitations": [
+      {
+        "paperTitle": "Evaluating Central Bank Asset Purchase and Operational Frameworks in the Euro Area",
+        "authors": "Ulrich Bindseil and Philip R. Lane",
+        "year": 2024,
+        "sourceOrJournal": "ECB Working Paper Series",
+        "keyFinding": "A narrow-spread corridor stabilizes short-term market rates with significantly less aggregate balance sheet expansion than a permanent floor system."
+      }
+    ],
+    "potentialResearchQuestions": [
+      "Does a permanent structural bond portfolio in the Eurozone distort sovereign yield curve price discovery during periods of asymmetric fiscal shocks?"
+    ],
+    "futureIndicatorsToWatch": [
+      "€STR volumes and rate dispersion percentile",
+      "Eurozone target balances (Target3 net claims)",
+      "10-year BTP-Bund and Bonos-Bund sovereign spreads"
+    ],
+    "significanceScore": 89,
+    "relatedStoryIds": [
+      "story-fed-qt-calibration-2026",
+      "story-policy-tpi-monitoring"
+    ],
+    "status": "analyzed"
+  },
+  {
+    "id": "story-bis-fx-swap-liquidity-2026",
+    "headline": "BIS Warns of Off-Balance-Sheet FX Swap Vulnerabilities in Global Non-Bank Financial Intermediation",
+    "originalSource": "Bank for International Settlements Quarterly Review Bulletin",
+    "sourceUrl": "https://www.bis.org/publ/qtrpdf/r_qt2611a.htm",
+    "publicationDate": "2026-11-07",
+    "eventDate": "2026-11-06",
+    "jurisdiction": "Global",
+    "institutions": [
+      "Bank for International Settlements",
+      "Financial Stability Board (FSB)",
+      "G10 Central Bank Governors"
+    ],
+    "factualSummary": "The BIS released empirical estimates indicating that off-balance-sheet US dollar debt embedded in FX swaps, forwards, and currency swaps held by non-US financial institutions has exceeded $85 trillion. The review highlighted that pension funds and life insurers running cross-currency duration mismatches rely heavily on short-tenor roll-over contracts with major dealer banks.",
+    "classification": [
+      "International finance",
+      "Financial economics",
+      "Banking and financial regulation"
+    ],
+    "mechanisms": [
+      "International capital flows",
+      "Information asymmetry",
+      "Credit transmission",
+      "Expectations and uncertainty"
+    ],
+    "theoreticalFrameworks": [
+      "Covered Interest Parity (CIP) Deviations and the Dollar Funding Premium (Du, Tepper & Verdelhan, 2018)",
+      "Global Financial Cycle and Central Bank Swap Lines (Rey, 2015; Obstfeld et al., 2019)",
+      "Liquidity Spiral and Fire-Sale Externality (Brunnermeier & Pedersen, 2009)"
+    ],
+    "economicMechanismsDetail": "FX swaps create functional debt obligations identical to collateralized dollar borrowing, yet are excluded from standard balance sheet leverage and accounting debt tallies. When global risk appetite drops, US dealers ration their balance sheet space to preserve supplementary leverage ratio (SLR) buffers. Non-US institutions facing roll-overs are forced to bid up the dollar, widening cross-currency basis spreads and propagating financial stress internationally.",
+    "possibleImplications": {
+      "nearTerm": [
+        "Heightened sensitivity of non-US institutional portfolios to sudden Federal Reserve liquidity shifts or USD appreciation shocks.",
+        "Regulatory scrutiny on synthetic leverage reporting under FSB and IOSCO macroprudential frameworks."
+      ],
+      "structural": [
+        "Persistent pressure for permanent multilateral central bank FX swap arrangements beyond the current bilateral standing network.",
+        "Potential disincentives for institutional asset managers to hedge foreign exchange risk on international real asset investments."
+      ]
+    },
+    "distributionalEffects": "Large global custody and investment banks capture basis premia during volatility; non-bank institutional asset owners (pension funds, sovereign wealth funds) bear higher hedging costs.",
+    "uncertaintyAndAlternatives": "Industry representatives contend that because FX swaps are backed by opposing currency collateral, the actual credit loss probability is negligible relative to uncollateralized syndicated loans.",
+    "academicResearchCitations": [
+      {
+        "paperTitle": "Deviations from Covered Interest Parity and Balance Sheet Constraints",
+        "authors": "Wenxin Du, Alexander Tepper, and Adrien Verdelhan",
+        "year": 2018,
+        "sourceOrJournal": "The Journal of Finance",
+        "keyFinding": "Post-crisis regulatory leverage constraints broke CIP arbitrage, turning the currency basis into a persistent price on intermediary balance sheet capacity."
+      }
+    ],
+    "potentialResearchQuestions": [
+      "To what extent do central bank currency swap lines mitigate systemic run risks among non-bank institutional participants lacking direct discount window access?"
+    ],
+    "futureIndicatorsToWatch": [
+      "3-month EUR/USD and JPY/USD cross-currency basis swap spreads (bps)",
+      "Dealer CDS indices and Bank Commercial Paper issuance tenors",
+      "Non-US bank holdings of US Treasury securities"
+    ],
+    "significanceScore": 92,
+    "relatedStoryIds": [
+      "story-fed-qt-calibration-2026",
+      "story-china-pboc-liquidity-2026"
+    ],
+    "status": "analyzed"
+  },
+  {
+    "id": "story-china-pboc-liquidity-2026",
+    "headline": "PBOC Cuts Reserve Requirement Ratio (RRR) and Launches Targeted Refinancing for Advanced Tech",
+    "originalSource": "People's Bank of China Executive Release & State Council Communiqué",
+    "sourceUrl": "http://www.pbc.gov.cn/goutongjiaoliu/113456/113469/index.html",
+    "publicationDate": "2026-11-08",
+    "eventDate": "2026-11-07",
+    "jurisdiction": "China",
+    "institutions": [
+      "People's Bank of China",
+      "National Financial Regulatory Administration (NFRA)",
+      "State Council of China"
+    ],
+    "factualSummary": "The PBOC announced a 50-basis-point reduction in the statutory reserve requirement ratio for all commercial banks (excluding rural banks already at 5%), releasing approximately 1 trillion yuan in long-term liquidity. Concurrently, a special 500-billion-yuan low-interest relending facility was deployed to finance research and equipment upgrades in high-end manufacturing and semiconductors.",
+    "classification": [
+      "Macroeconomics",
+      "Monetary economics",
+      "Development economics",
+      "Industrial organisation"
+    ],
+    "mechanisms": [
+      "Credit transmission",
+      "Capital allocation",
+      "Price mechanisms",
+      "Institutional change"
+    ],
+    "theoreticalFrameworks": [
+      "Credit Guidance and Directed Lending Models (Stiglitz & Weiss, 1981)",
+      "Structural Monetary Policy Frameworks in Dual-Track Economies",
+      "Balance Sheet Recession and Debt-Deflation Pressures (Koo, 2011; Bernanke & Gertler, 1989)"
+    ],
+    "economicMechanismsDetail": "The broad-based RRR cut lowers commercial banks' funding costs by eliminating mandatory low-yielding statutory reserves. However, rather than relying exclusively on aggregate interest rate cuts which risk exacerbating capital outflows and yuan depreciation pressures, the central bank couples the liquidity release with earmarked quota lending. This targets credit creation toward capital-intensive manufacturing while containing speculative flows into overbuilt real estate sectors.",
+    "possibleImplications": {
+      "nearTerm": [
+        "Boosts net interest margin (NIM) cushions for Chinese state-owned commercial banks by replacing high-cost MLF loans.",
+        "Moderates downside drag from property developer credit restructuring."
+      ],
+      "structural": [
+        "Deepens state-directed credit allocation away from municipal real-estate urbanization toward high-tech industrial self-reliance.",
+        "Increases aggregate private corporate debt ratios while keeping consumer price inflation subdued."
+      ]
+    },
+    "distributionalEffects": "High-tech manufacturing enterprises and sovereign state contractors receive priority credit lines below 2.0% annual financing; private households face low deposit rates with limited consumption multiplier spillover.",
+    "uncertaintyAndAlternatives": "If private corporate and household loan demand remains structurally sluggish due to pessimistic income expectations, the liquidity injection may pool within the interbank money market without translating into real economic velocity.",
+    "academicResearchCitations": [
+      {
+        "paperTitle": "The Political Economy of Directed Credit in China",
+        "authors": "Chong-En Bai, Chang-Tai Hsieh, and Zheng Michael Song",
+        "year": 2020,
+        "sourceOrJournal": "Brookings Papers on Economic Activity",
+        "keyFinding": "Structural credit quotas channel resources into policy-favored industries, creating localized productivity surges alongside capital misallocation in non-favored sectors."
+      }
+    ],
+    "potentialResearchQuestions": [
+      "What are the dynamic deadweight losses of targeted monetary refinancing compared to fiscal wage subsidies when facing aggregate demand deficits?"
+    ],
+    "futureIndicatorsToWatch": [
+      "Aggregate Financing to the Real Economy (AFRE) monthly growth rate",
+      "USD/CNY onshore and offshore spot rates",
+      "China Core CPI and Producer Price Index (PPI) year-over-year"
+    ],
+    "significanceScore": 88,
+    "relatedStoryIds": [
+      "story-bis-fx-swap-liquidity-2026"
+    ],
+    "status": "analyzed"
+  },
+  {
+    "id": "story-imf-weo-fragmentation-2026",
+    "headline": "IMF Flags Global Trade Fragmentation Costs: Multilateral Trade Barriers Threaten 2.8% Output Loss",
+    "originalSource": "International Monetary Fund - World Economic Outlook Analytical Chapters",
+    "sourceUrl": "https://www.imf.org/en/Publications/WEO/Issues/2026/10/weo-analytical-chapters",
+    "publicationDate": "2026-11-08",
+    "eventDate": "2026-11-07",
+    "jurisdiction": "Global",
+    "institutions": [
+      "International Monetary Fund",
+      "World Trade Organization",
+      "OECD"
+    ],
+    "factualSummary": "The IMF presented an updated multi-country general equilibrium simulation estimating that escalating bilateral tariff measures, export controls on critical minerals, and retaliatory industrial policies could reduce global output by up to 2.8% in the medium term. Emerging market economies with high external debt and concentrated export baskets face the sharpest terms-of-trade degradation.",
+    "classification": [
+      "International economics",
+      "International finance",
+      "Public economics"
+    ],
+    "mechanisms": [
+      "Market power",
+      "Strategic interaction",
+      "Price mechanisms",
+      "Welfare and distribution"
+    ],
+    "theoreticalFrameworks": [
+      "Ricardian Comparative Advantage and Gains from Trade (Costinot & Rodríguez-Clare, 2014)",
+      "Tariff War Game Theory and Nash Equilibria (Grossman & Helpman, 1994)",
+      "Global Value Chain (GVC) Multi-Stage Production Disruption (Antràs & Chor, 2021)"
+    ],
+    "economicMechanismsDetail": "Import duties and localized sourcing quotas force firms to substitute efficient international suppliers with higher-cost domestic or nearshore alternatives. Input price inflation accumulates along vertical supply chains. Concurrently, sovereign tit-for-tat retaliations destroy export market scale economies, reducing capital accumulation rates and retarding total factor productivity (TFP) growth across both developing and developed blocs.",
+    "possibleImplications": {
+      "nearTerm": [
+        "Persistent cost-push inflationary pressure on imported manufactured intermediates and electronics.",
+        "Heightened currency volatility among intermediate transshipment hubs (e.g. Mexico, Vietnam, Poland)."
+      ],
+      "structural": [
+        "Bifurcation of global technology standards and supply chain ecosystems.",
+        "Weakened compliance with WTO multilateral dispute settlement rulings, shifting world trade to bilateral power negotiations."
+      ]
+    },
+    "distributionalEffects": "Domestic import-competing capital owners in subsidized industries gain rents; consumer purchasing power declines, disproportionately harming lower-income households whose consumption baskets have high tradable goods content.",
+    "uncertaintyAndAlternatives": "Proponents of strategic trade policy argue that models fail to value supply-chain resilience against non-economic geopolitical disruptions, suggesting that national security benefits offset the simulated efficiency losses.",
+    "academicResearchCitations": [
+      {
+        "paperTitle": "Global Supply Chains in a Fragmented World",
+        "authors": "Pol Antràs and Laura Alfaro",
+        "year": 2024,
+        "sourceOrJournal": "Review of Economic Studies",
+        "keyFinding": "Nearshoring alters trade routes through third-party connector countries rather than completely decoupling major economic blocs, adding intermediary markups."
+      }
+    ],
+    "potentialResearchQuestions": [
+      "How does geoeconomic fragmentation impact sovereign borrowing premia in small open economies reliant on commodity exports?"
+    ],
+    "futureIndicatorsToWatch": [
+      "Global Trade Uncertainty Index (WTUI)",
+      "Baltic Dry Index and Shanghai Containerized Freight Index",
+      "Emerging Market Bond Index (EMBI) sovereign yield spreads"
+    ],
+    "significanceScore": 90,
+    "relatedStoryIds": [
+      "story-china-pboc-liquidity-2026",
+      "story-nber-paper-tariffs"
+    ],
+    "status": "analyzed"
+  }
+]

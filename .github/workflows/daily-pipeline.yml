@@ -1,0 +1,38 @@
+name: Economic Observatory Daily Ingestion Pipeline
+
+on:
+  schedule:
+    # Runs daily at 06:00 UTC (before Asian/European market opens)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Allows manual trigger via GitHub Actions UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Execute Daily Economic Ingestion & Analysis Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          APP_URL: ${{ secrets.APP_URL }}
+        run: npm run pipeline
+
+      - name: Commit updated archive datasets
+        run: |
+          git config --global user.name "Economic Observatory Bot"
+          git config --global user.email "bot@economic-observatory.internal"
+          git add data/
+          git diff --staged --quiet || git commit -m "chore(data): automated daily economic briefing update [skip ci]"
+          git push || echo "No permissions or no changes to push"

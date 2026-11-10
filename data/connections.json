@@ -1,0 +1,64 @@
+[
+  {
+    "id": "conn-qt-repo19",
+    "sourceId": "story-fed-qt-calibration-2026",
+    "targetId": "story-ecb-balance-sheet-2026",
+    "sourceTitle": "Fed Moderates Balance Sheet Runoff Pace",
+    "targetTitle": "ECB Deploys Structural Refinancing Facility",
+    "type": "continuation",
+    "rationale": "Both actions represent coordinated central bank operational shifts transitioning from emergency crisis balance sheets to long-term steady-state liquidity operating regimes without provoking interbank rate spikes.",
+    "confidence": "established"
+  },
+  {
+    "id": "conn-qt-history-19",
+    "sourceId": "story-fed-qt-calibration-2026",
+    "targetId": "hist-repo-spike-2019",
+    "sourceTitle": "Fed Moderates Balance Sheet Runoff Pace",
+    "targetTitle": "September 2019 Repo Market Liquidity Spike",
+    "type": "historical analogy",
+    "rationale": "In September 2019, excessive reserve drainage coupled with corporate tax deadlines and Treasury auction settlements drove SOFR from 2.4% to nearly 10% overnight. The 2026 QT taper explicitly seeks to prevent this structural vulnerability.",
+    "historicalPrecedent": {
+      "era": "September 2019",
+      "description": "The Fed allowed reserve balances to fall below $1.4 trillion while Treasury issuance surged, exhausting primary dealer cash balances and forcing sudden emergency term repo operations.",
+      "keySimilarity": "Depletion of cash in the overnight reverse repo facility leaves bank reserves as the sole buffer against Treasury cash drawdowns.",
+      "keyDifference": "The Standing Repo Facility (SRF) is now an active permanent backstop, providing an automatic ceiling to intraday repo spikes."
+    },
+    "confidence": "analogous"
+  },
+  {
+    "id": "conn-fx-swap-gfc",
+    "sourceId": "story-bis-fx-swap-liquidity-2026",
+    "targetId": "hist-swap-lines-2008",
+    "sourceTitle": "BIS Warns of Off-Balance-Sheet FX Swap Vulnerabilities",
+    "targetTitle": "2008 Global Financial Crisis Dollar Funding Freeze",
+    "type": "theoretical connection",
+    "rationale": "Demonstrates Covered Interest Parity (CIP) breakdown as dealer bank balance sheet capacity binds, requiring central bank swap line intervention to prevent cross-currency fire sales.",
+    "historicalPrecedent": {
+      "era": "Autumn 2008 & March 2020",
+      "description": "Foreign commercial banks could not roll over short-term USD commercial paper and FX swap commitments, forcing the Federal Reserve to establish emergency liquidity swap lines with 14 foreign central banks.",
+      "keySimilarity": "Global reliance on short-term rolling dollar liabilities by institutions outside the direct jurisdiction of the Federal Reserve.",
+      "keyDifference": "Current vulnerability is concentrated in non-bank financial intermediaries (pension funds and private debt) rather than traditional European commercial banks."
+    },
+    "confidence": "established"
+  },
+  {
+    "id": "conn-tariffs-fragmentation",
+    "sourceId": "story-imf-weo-fragmentation-2026",
+    "targetId": "research-cepr-tariffs-markups",
+    "sourceTitle": "IMF Flags Global Trade Fragmentation Costs",
+    "targetTitle": "CEPR Tariff Incidence in Vertical Production Networks",
+    "type": "causal hypothesis",
+    "rationale": "The CEPR micro-level findings provide direct empirical verification for the theoretical supply-chain intermediate markup mechanisms assumed in the IMF multi-country trade model.",
+    "confidence": "established"
+  },
+  {
+    "id": "conn-pboc-liquidity-fed",
+    "sourceId": "story-china-pboc-liquidity-2026",
+    "targetId": "story-fed-qt-calibration-2026",
+    "sourceTitle": "PBOC Cuts RRR and Deploys Targeted Refinancing",
+    "targetTitle": "Fed Moderates Balance Sheet Runoff Pace",
+    "type": "contradictory evidence",
+    "rationale": "Contrasts divergent monetary regimes: while Western central banks operate market-wide interest rate and reserve instruments, the PBOC relies heavily on quantitative reserve mandates and directed sectoral credit rationing.",
+    "confidence": "established"
+  }
+]

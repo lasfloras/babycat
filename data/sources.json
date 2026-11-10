@@ -1,0 +1,122 @@
+[
+  {
+    "id": "fed-press-releases",
+    "name": "Federal Reserve Board - Press Releases & Speeches",
+    "institution": "Federal Reserve System",
+    "type": "rss",
+    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+    "jurisdiction": "United States",
+    "category": "Monetary Policy",
+    "active": true,
+    "lastChecked": "2026-11-09T18:00:00Z",
+    "itemCount": 24
+  },
+  {
+    "id": "ecb-press",
+    "name": "ECB Press Releases & Monetary Policy Decisions",
+    "institution": "European Central Bank",
+    "type": "rss",
+    "url": "https://www.ecb.europa.eu/rss/press.html",
+    "jurisdiction": "Eurozone",
+    "category": "Monetary Policy",
+    "active": true,
+    "lastChecked": "2026-11-09T18:10:00Z",
+    "itemCount": 18
+  },
+  {
+    "id": "bis-research",
+    "name": "Bank for International Settlements - Papers & Speeches",
+    "institution": "Bank for International Settlements",
+    "type": "rss",
+    "url": "https://www.bis.org/doclist/rss/press_releases.rss",
+    "jurisdiction": "Global",
+    "category": "Banking & Financial Stability",
+    "active": true,
+    "lastChecked": "2026-11-09T18:15:00Z",
+    "itemCount": 15
+  },
+  {
+    "id": "imf-news",
+    "name": "IMF Research & Executive Board Decisions",
+    "institution": "International Monetary Fund",
+    "type": "rss",
+    "url": "https://www.imf.org/en/News/Rss?category=Press%20Releases",
+    "jurisdiction": "Global",
+    "category": "International Finance",
+    "active": true,
+    "lastChecked": "2026-11-09T18:20:00Z",
+    "itemCount": 12
+  },
+  {
+    "id": "oecd-economic-outlook",
+    "name": "OECD Economic Forecasts & Structural Policy Reviews",
+    "institution": "OECD",
+    "type": "rss",
+    "url": "https://www.oecd.org/economy/rss.xml",
+    "jurisdiction": "Global",
+    "category": "Macroeconomics",
+    "active": true,
+    "lastChecked": "2026-11-09T18:25:00Z",
+    "itemCount": 10
+  },
+  {
+    "id": "nber-working-papers",
+    "name": "National Bureau of Economic Research (NBER) Working Papers",
+    "institution": "NBER",
+    "type": "rss",
+    "url": "https://www.nber.org/rss/new.xml",
+    "jurisdiction": "United States",
+    "category": "Academic Research",
+    "active": true,
+    "lastChecked": "2026-11-09T18:30:00Z",
+    "itemCount": 30
+  },
+  {
+    "id": "cepr-discussion-papers",
+    "name": "Centre for Economic Policy Research (CEPR) Policy Insights",
+    "institution": "CEPR",
+    "type": "rss",
+    "url": "https://cepr.org/voxeu/rss",
+    "jurisdiction": "Europe",
+    "category": "Academic Research",
+    "active": true,
+    "lastChecked": "2026-11-09T18:35:00Z",
+    "itemCount": 22
+  },
+  {
+    "id": "bls-cpi-releases",
+    "name": "Bureau of Labor Statistics - CPI & Employment Situation",
+    "institution": "Bureau of Labor Statistics",
+    "type": "rss",
+    "url": "https://www.bls.gov/feed/cpi.rss",
+    "jurisdiction": "United States",
+    "category": "Macro Data",
+    "active": true,
+    "lastChecked": "2026-11-09T18:40:00Z",
+    "itemCount": 14
+  },
+  {
+    "id": "pboc-monetary-policy",
+    "name": "People's Bank of China - Monetary Policy Announcements",
+    "institution": "People's Bank of China",
+    "type": "api",
+    "url": "http://www.pbc.gov.cn/zhengcehuobisi/125207/index.html",
+    "jurisdiction": "China",
+    "category": "Monetary Policy & Credit Allocation",
+    "active": true,
+    "lastChecked": "2026-11-09T18:45:00Z",
+    "itemCount": 8
+  },
+  {
+    "id": "bea-gdp-accounts",
+    "name": "Bureau of Economic Analysis - National Income & Product Accounts",
+    "institution": "Bureau of Economic Analysis",
+    "type": "rss",
+    "url": "https://apps.bea.gov/rss/rss.xml",
+    "jurisdiction": "United States",
+    "category": "Macro Data",
+    "active": true,
+    "lastChecked": "2026-11-09T18:50:00Z",
+    "itemCount": 9
+  }
+]

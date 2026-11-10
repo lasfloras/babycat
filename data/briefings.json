@@ -1,0 +1,63 @@
+[
+  {
+    "id": "briefing-2026-11-09",
+    "editionDate": "2026-11-09",
+    "generatedAt": "2026-11-09T20:00:00Z",
+    "lastUpdateStatus": "success",
+    "executiveSummary": "Global central banking enters a delicate phase of operational normalization against a backdrop of emerging money market liquidity frictions and deepening trade fragmentation. The Federal Reserve's decision to taper the pace of quantitative tightening marks a deliberate effort to defend money market stability as reverse repo buffers near exhaustion. Concurrently, the European Central Bank's new structural refinancing framework seeks to prevent peripheral fragmentation without returning to subsidized crisis loans. In Asia, the People's Bank of China combines aggregate RRR cuts with directed industrial refinancing, highlighting the divergent policy responses across major economic jurisdictions.",
+    "leadStoryId": "story-fed-qt-calibration-2026",
+    "topStoryIds": [
+      "story-fed-qt-calibration-2026",
+      "story-bis-fx-swap-liquidity-2026",
+      "story-ecb-balance-sheet-2026",
+      "story-imf-weo-fragmentation-2026",
+      "story-china-pboc-liquidity-2026"
+    ],
+    "environmentOverview": {
+      "monetaryStance": "Cautiously restrictive across developed markets; gradual calibration of balance sheet runoffs to prevent funding market flashpoints while maintaining terminal rates above neutral (r*).",
+      "fiscalOutlook": "Mounting sovereign debt service burdens in the US and Eurozone constrain countercyclical fiscal space; reliance shifts back toward monetary and targeted credit instruments.",
+      "financialStabilityAlerts": "Elevated off-balance-sheet FX swap rolls ($85T) and non-bank financial intermediary (NBFI) leverage warrant active surveillance as bank reserves concentrate.",
+      "crossBorderRisks": "Geoeconomic trade fragmentation and targeted export tariffs generate localized input price wedges, reducing real global GDP potential by an estimated 2.8%."
+    },
+    "regionalSummary": {
+      "United States": "Fed slows Treasury runoff to $25B/mo; labor market cooling to trend while headline CPI stabilizes near 2.6%. Treasury curve un-inverts as term premia re-anchor.",
+      "Eurozone": "ECB narrows MRO-DFR corridor to 15 bps to preempt interbank rate dispersion; sovereign spreads remain stable under vigilant TPI readiness.",
+      "China & East Asia": "PBOC releases 1T yuan via 50 bps RRR cut, deploying 500B yuan targeted facility for high-tech capital upgrades; property sector debt resolution remains gradual.",
+      "Global & Multilateral": "BIS and IMF highlight cross-border vulnerabilities in dollar swap lines and supply chain reconfiguration markups."
+    },
+    "indicatorHighlights": [
+      {
+        "label": "US Fed Funds Target Upper Bound",
+        "value": "4.50%",
+        "change": "-25 bps",
+        "signal": "dovish"
+      },
+      {
+        "label": "ECB Deposit Facility Rate",
+        "value": "3.25%",
+        "change": "-25 bps",
+        "signal": "dovish"
+      },
+      {
+        "label": "US 10Y-2Y Treasury Yield Spread",
+        "value": "+18 bps",
+        "change": "+6 bps",
+        "signal": "expansionary"
+      },
+      {
+        "label": "US Core CPI YoY (Latest)",
+        "value": "2.8%",
+        "change": "-0.1%",
+        "signal": "neutral"
+      },
+      {
+        "label": "USD/EUR Cross-Currency Basis (3M)",
+        "value": "-12 bps",
+        "change": "-3 bps",
+        "signal": "contractionary"
+      }
+    ],
+    "sourcesQueriedCount": 10,
+    "articlesIngestedCount": 42
+  }
+]

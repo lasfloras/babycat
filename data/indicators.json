@@ -1,0 +1,300 @@
+[
+  {
+    "id": "ind-us-fed-funds",
+    "name": "US Federal Funds Target Rate (Upper Bound)",
+    "category": "rates",
+    "jurisdiction": "United States",
+    "latestObservation": 4.5,
+    "unit": "%",
+    "referencePeriod": "November 2026",
+    "releaseDate": "2026-11-06",
+    "previousObservation": 4.75,
+    "revision": "Target lowered 25 bps at Nov FOMC meeting",
+    "history": [
+      {
+        "date": "2026-01",
+        "value": 5.25
+      },
+      {
+        "date": "2026-03",
+        "value": 5.25
+      },
+      {
+        "date": "2026-05",
+        "value": 5
+      },
+      {
+        "date": "2026-07",
+        "value": 5
+      },
+      {
+        "date": "2026-09",
+        "value": 4.75
+      },
+      {
+        "date": "2026-11",
+        "value": 4.5
+      }
+    ],
+    "significance": "Primary nominal benchmark anchor for global dollar risk-free rates and borrowing conditions."
+  },
+  {
+    "id": "ind-ecb-dfr",
+    "name": "ECB Deposit Facility Rate (DFR)",
+    "category": "rates",
+    "jurisdiction": "Eurozone",
+    "latestObservation": 3.25,
+    "unit": "%",
+    "referencePeriod": "October 2026",
+    "releaseDate": "2026-10-29",
+    "previousObservation": 3.5,
+    "history": [
+      {
+        "date": "2026-01",
+        "value": 4
+      },
+      {
+        "date": "2026-04",
+        "value": 3.75
+      },
+      {
+        "date": "2026-06",
+        "value": 3.75
+      },
+      {
+        "date": "2026-09",
+        "value": 3.5
+      },
+      {
+        "date": "2026-10",
+        "value": 3.25
+      }
+    ],
+    "significance": "Governs remuneration on bank overnight excess reserves across the Eurosystem."
+  },
+  {
+    "id": "ind-us-cpi-core",
+    "name": "US Core Consumer Price Index (YoY)",
+    "category": "inflation",
+    "jurisdiction": "United States",
+    "latestObservation": 2.8,
+    "unit": "% YoY",
+    "referencePeriod": "October 2026",
+    "releaseDate": "2026-11-08",
+    "previousObservation": 2.9,
+    "revision": "Revised from 3.0% preliminary estimate",
+    "history": [
+      {
+        "date": "2026-05",
+        "value": 3.3
+      },
+      {
+        "date": "2026-06",
+        "value": 3.2
+      },
+      {
+        "date": "2026-07",
+        "value": 3.1
+      },
+      {
+        "date": "2026-08",
+        "value": 3
+      },
+      {
+        "date": "2026-09",
+        "value": 2.9
+      },
+      {
+        "date": "2026-10",
+        "value": 2.8
+      }
+    ],
+    "significance": "Excludes volatile food and energy; key metric for Fed underlying disinflation progress."
+  },
+  {
+    "id": "ind-euro-hicp",
+    "name": "Euro Area Harmonised Index of Consumer Prices (YoY)",
+    "category": "inflation",
+    "jurisdiction": "Eurozone",
+    "latestObservation": 2.1,
+    "unit": "% YoY",
+    "referencePeriod": "October 2026 (Flash)",
+    "releaseDate": "2026-11-04",
+    "previousObservation": 1.9,
+    "history": [
+      {
+        "date": "2026-05",
+        "value": 2.5
+      },
+      {
+        "date": "2026-06",
+        "value": 2.4
+      },
+      {
+        "date": "2026-07",
+        "value": 2.2
+      },
+      {
+        "date": "2026-08",
+        "value": 2
+      },
+      {
+        "date": "2026-09",
+        "value": 1.9
+      },
+      {
+        "date": "2026-10",
+        "value": 2.1
+      }
+    ],
+    "significance": "Primary price stability target metric for the European Central Bank."
+  },
+  {
+    "id": "ind-us-yield-spread-10y2y",
+    "name": "US 10-Year minus 2-Year Treasury Yield Spread",
+    "category": "stability",
+    "jurisdiction": "United States",
+    "latestObservation": 18,
+    "unit": "basis points",
+    "referencePeriod": "November 2026 Daily",
+    "releaseDate": "2026-11-08",
+    "previousObservation": 12,
+    "history": [
+      {
+        "date": "2026-06",
+        "value": -25
+      },
+      {
+        "date": "2026-07",
+        "value": -14
+      },
+      {
+        "date": "2026-08",
+        "value": -4
+      },
+      {
+        "date": "2026-09",
+        "value": 8
+      },
+      {
+        "date": "2026-10",
+        "value": 12
+      },
+      {
+        "date": "2026-11",
+        "value": 18
+      }
+    ],
+    "significance": "Un-inversion of the yield curve historically marks the transition from monetary pause to easing cycle."
+  },
+  {
+    "id": "ind-us-unemployment-rate",
+    "name": "US U-3 Unemployment Rate",
+    "category": "labor",
+    "jurisdiction": "United States",
+    "latestObservation": 4.2,
+    "unit": "%",
+    "referencePeriod": "October 2026",
+    "releaseDate": "2026-11-06",
+    "previousObservation": 4.1,
+    "history": [
+      {
+        "date": "2026-05",
+        "value": 3.9
+      },
+      {
+        "date": "2026-06",
+        "value": 4
+      },
+      {
+        "date": "2026-07",
+        "value": 4.1
+      },
+      {
+        "date": "2026-08",
+        "value": 4.2
+      },
+      {
+        "date": "2026-09",
+        "value": 4.1
+      },
+      {
+        "date": "2026-10",
+        "value": 4.2
+      }
+    ],
+    "significance": "Labor market tightness measure; inputs into Sahm Rule recession indicators."
+  },
+  {
+    "id": "ind-china-gdp-yoy",
+    "name": "China Real GDP Growth (YoY)",
+    "category": "macro",
+    "jurisdiction": "China",
+    "latestObservation": 4.8,
+    "unit": "% YoY",
+    "referencePeriod": "Q3 2026",
+    "releaseDate": "2026-10-18",
+    "previousObservation": 4.7,
+    "history": [
+      {
+        "date": "2025-Q3",
+        "value": 4.9
+      },
+      {
+        "date": "2025-Q4",
+        "value": 5.2
+      },
+      {
+        "date": "2026-Q1",
+        "value": 5.1
+      },
+      {
+        "date": "2026-Q2",
+        "value": 4.7
+      },
+      {
+        "date": "2026-Q3",
+        "value": 4.8
+      }
+    ],
+    "significance": "Macroeconomic pulse of the world's second largest economy and prime commodities consumer."
+  },
+  {
+    "id": "ind-global-fx-basis",
+    "name": "3-Month EUR/USD Cross-Currency Basis Swap Spread",
+    "category": "external",
+    "jurisdiction": "Global",
+    "latestObservation": -12.4,
+    "unit": "basis points",
+    "referencePeriod": "November 2026",
+    "releaseDate": "2026-11-08",
+    "previousObservation": -9.5,
+    "history": [
+      {
+        "date": "2026-06",
+        "value": -7.2
+      },
+      {
+        "date": "2026-07",
+        "value": -8
+      },
+      {
+        "date": "2026-08",
+        "value": -7.8
+      },
+      {
+        "date": "2026-09",
+        "value": -8.5
+      },
+      {
+        "date": "2026-10",
+        "value": -9.5
+      },
+      {
+        "date": "2026-11",
+        "value": -12.4
+      }
+    ],
+    "significance": "Measures offshore US dollar funding premium and intermediary balance sheet tightness under Covered Interest Parity."
+  }
+]

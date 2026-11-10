@@ -1,0 +1,95 @@
+[
+  {
+    "id": "research-nber-mortgage-passthrough",
+    "title": "Monetary Policy Pass-Through in a Fixed-Rate Mortgage Regime: The Lock-In Channel and Labor Mobility",
+    "authors": [
+      "Gabriel Chodorow-Reich",
+      "Plamen Nenov",
+      "Johannes Wieland"
+    ],
+    "institution": "NBER",
+    "publicationDate": "2026-10-28",
+    "format": "Working Paper",
+    "field": "Monetary economics / Housing Economics",
+    "isAbstractOnly": false,
+    "researchQuestion": "How does the prevalence of long-tenor fixed-rate mortgages alter the macroeconomic transmission of central bank rate hikes to consumer expenditure and regional labor reallocation?",
+    "methodology": "Empirical estimation using micro-level credit bureau records and county-level deed registries combined with a heterogeneous-agent New Keynesian (HANK) model incorporating mortgage refinancing options and geographic moving frictions.",
+    "mainFindings": [
+      "The \"mortgage lock-in effect\" reduced interstate residential moving rates by 18% among households with mortgage interest rates 300 bps below prevailing origination rates.",
+      "Aggregate consumer spending contracted through reduced housing transaction turnover (furnishings, renovations, brokerage fees) rather than direct debt-service cash flow cuts.",
+      "Labor misallocation generated a persistent 0.25 percentage point drag on aggregate labor productivity in dynamic metro areas."
+    ],
+    "contribution": "Provides quantitative identification of the housing lock-in channel as an asymmetric structural drag on labor supply responsiveness during monetary tightening cycles.",
+    "limitations": [
+      "Relies primarily on US municipal deed registries; findings may not generalize directly to European jurisdictions with adjustable-rate or portable mortgage contracts.",
+      "Long-term general equilibrium wage adjustments in receiving metro areas are estimated with standard error bounds."
+    ],
+    "relatedPreviousResearch": [
+      "Berger, Milbradt, Tourre & Vavra (2021) \"Mortgage Prepayment and Path-Dependent Monetary Policy\"",
+      "Mian, Rao & Sufi (2013) \"Household Balance Sheets, Consumption, and the Economic Slump\""
+    ],
+    "paperUrl": "https://www.nber.org/papers/w33120"
+  },
+  {
+    "id": "research-cepr-tariffs-markups",
+    "title": "Tariff Incidence in Vertically Integrated Production Networks: Who Bears the Cost of Strategic Trade Realignment?",
+    "authors": [
+      "Dalia Marin",
+      "Jan De Loecker",
+      "Kalina Manova"
+    ],
+    "institution": "CEPR",
+    "publicationDate": "2026-11-02",
+    "format": "Policy Discussion Paper",
+    "field": "International economics / Industrial Organisation",
+    "isAbstractOnly": false,
+    "researchQuestion": "What fraction of statutory import duties on industrial intermediate goods is absorbed by foreign exporting markups versus passed onto domestic downstream producer prices?",
+    "methodology": "High-frequency customs transaction dataset spanning 2021-2026 across European and North American industrial machinery imports, merged with firm balance sheet markup estimations via production function approaches.",
+    "mainFindings": [
+      "Complete pass-through (near 100%) of tariffs into dockside import prices in intermediate manufacturing, indicating zero terms-of-trade improvement for the tariff-imposing jurisdiction.",
+      "Domestic downstream manufacturing firms suffered a 4.2% margin compression on average due to intermediate input stickiness before substituting suppliers.",
+      "Transshipment routing through intermediary non-aligned jurisdictions added an average 6.8% logistics and compliance overhead markup."
+    ],
+    "contribution": "Demonstrates empirically that intermediate input tariffs act as an immediate supply-side cost shock rather than a strategic rent-extraction tool.",
+    "limitations": [
+      "Excludes non-tariff regulatory barriers such as carbon border adjustment mechanisms (CBAM).",
+      "Analysis is abstract-based for confidential proprietary Japanese automotive supply sub-components."
+    ],
+    "relatedPreviousResearch": [
+      "Amiti, Redding & Weinstein (2019) \"The Impact of the 2018 Tariffs on Prices and Welfare\"",
+      "Fajgelbaum, Goldberg, Kennedy & Khandelwal (2020) \"The Return to Protectionism\""
+    ],
+    "paperUrl": "https://cepr.org/voxeu/columns/tariff-incidence-vertical-supply-chains"
+  },
+  {
+    "id": "research-bis-shadow-banking",
+    "title": "The Inherent Fragility of Non-Bank Liquidity Transformation: Run Dynamics in Private Credit Funds",
+    "authors": [
+      "Claudio Borio",
+      "Inaki Aldasoro",
+      "Torsten Ehlers"
+    ],
+    "institution": "BIS",
+    "publicationDate": "2026-10-15",
+    "format": "Working Paper",
+    "field": "Financial economics / Banking and financial regulation",
+    "isAbstractOnly": true,
+    "researchQuestion": "Do redemption gates and subscription-line bank credit facilities effectively insulate semi-liquid private debt funds from classic run dynamics during credit tightening?",
+    "methodology": "Abstract-based analytical model of collective action frictions calibrated against regulatory disclosures and syndicated loan default data during 2022-2026 interest rate shifts.",
+    "mainFindings": [
+      "Redemption gates mitigate immediate cash outflows but incentivize first-mover requests during early stress signals.",
+      "Subscription-line borrowing by private funds creates a contagion link back into regulated tier-1 commercial banking balance sheets.",
+      "Valuation lags on opaque direct loans mask economic impairments until liquidity shocks force secondary portfolio sales."
+    ],
+    "contribution": "Identifies the structural interconnections between private credit asset managers and global systemically important banks (G-SIBs).",
+    "limitations": [
+      "Analysis is abstract-based due to limited public transaction pricing in bilateral private credit agreements.",
+      "Sample reflects predominantly upper-middle market corporate borrowers."
+    ],
+    "relatedPreviousResearch": [
+      "Diamond & Dybvig (1983) \"Bank Runs, Deposit Insurance, and Liquidity\"",
+      "Plantin (2015) \"Shadow Banking and Bank Capital Regulation\""
+    ],
+    "paperUrl": "https://www.bis.org/publ/work1180.htm"
+  }
+]
