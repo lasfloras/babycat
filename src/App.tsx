@@ -20,6 +20,15 @@ import {
   SourceConfig,
   PipelineExecutionStatus
 } from './types/index.ts';
+import {
+  initialBriefings,
+  initialStories,
+  initialPolicies,
+  initialResearch,
+  initialIndicators,
+  initialConnections,
+  initialSources
+} from './server/storage/seedData.ts';
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState<string>('daily-brief');
@@ -32,18 +41,19 @@ export default function App() {
     return false;
   });
 
-  // Data States
-  const [briefings, setBriefings] = useState<DailyBriefing[]>([]);
-  const [currentBriefing, setCurrentBriefing] = useState<DailyBriefing | null>(null);
-  const [stories, setStories] = useState<EconomicStory[]>([]);
-  const [policies, setPolicies] = useState<PolicyItem[]>([]);
-  const [research, setResearch] = useState<ResearchPaper[]>([]);
-  const [indicators, setIndicators] = useState<EconomicIndicator[]>([]);
-  const [connections, setConnections] = useState<EconomicConnection[]>([]);
+  // Pre-seed Data States with initial institutional dataset so UI never hangs indefinitely
+  const [briefings, setBriefings] = useState<DailyBriefing[]>(initialBriefings);
+  const [currentBriefing, setCurrentBriefing] = useState<DailyBriefing | null>(initialBriefings[0] || null);
+  const [stories, setStories] = useState<EconomicStory[]>(initialStories);
+  const [policies, setPolicies] = useState<PolicyItem[]>(initialPolicies);
+  const [research, setResearch] = useState<ResearchPaper[]>(initialResearch);
+  const [indicators, setIndicators] = useState<EconomicIndicator[]>(initialIndicators);
+  const [connections, setConnections] = useState<EconomicConnection[]>(initialConnections);
   const [graphNodes, setGraphNodes] = useState<any[]>([]);
-  const [sources, setSources] = useState<SourceConfig[]>([]);
+  const [sources, setSources] = useState<SourceConfig[]>(initialSources);
   const [pipelineStatus, setPipelineStatus] = useState<PipelineExecutionStatus | null>(null);
   const [isPipelineRunning, setIsPipelineRunning] = useState<boolean>(false);
+  const [syncStatus, setSyncStatus] = useState<'connected' | 'syncing' | 'snapshot'>('syncing');
 
   // Selected story for modal dossier
   const [selectedStory, setSelectedStory] = useState<EconomicStory | null>(null);
@@ -62,8 +72,27 @@ export default function App() {
 
   const toggleTheme = () => setIsDark((prev) => !prev);
 
+  // Safe fetch helper verifying HTTP ok and JSON content-type
+  const safeFetch = async <T,>(url: string, fallback: T): Promise<{ data: T; ok: boolean }> => {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        return { data: fallback, ok: false };
+      }
+      const contentType = res.headers.get('content-type') || '';
+      if (!contentType.includes('application/json')) {
+        return { data: fallback, ok: false };
+      }
+      const data = await res.json();
+      return { data, ok: true };
+    } catch {
+      return { data: fallback, ok: false };
+    }
+  };
+
   // Load all initial application data
   const loadData = useCallback(async () => {
+    setSyncStatus('syncing');
     try {
       const [
         briefingsRes,
@@ -76,29 +105,50 @@ export default function App() {
         sourcesRes,
         statusRes
       ] = await Promise.all([
-        fetch('/api/briefings').then((r) => r.json()),
-        fetch('/api/briefings/latest').then((r) => r.json()),
-        fetch('/api/stories').then((r) => r.json()),
-        fetch('/api/policies').then((r) => r.json()),
-        fetch('/api/research').then((r) => r.json()),
-        fetch('/api/indicators').then((r) => r.json()),
-        fetch('/api/connections').then((r) => r.json()),
-        fetch('/api/sources').then((r) => r.json()),
-        fetch('/api/pipeline/status').then((r) => r.json())
+        safeFetch<DailyBriefing[]>('/api/briefings', initialBriefings),
+        safeFetch<DailyBriefing>('/api/briefings/latest', initialBriefings[0]),
+        safeFetch<EconomicStory[]>('/api/stories', initialStories),
+        safeFetch<PolicyItem[]>('/api/policies', initialPolicies),
+        safeFetch<ResearchPaper[]>('/api/research', initialResearch),
+        safeFetch<EconomicIndicator[]>('/api/indicators', initialIndicators),
+        safeFetch<{ connections?: EconomicConnection[]; nodes?: any[] }>('/api/connections', {
+          connections: initialConnections,
+          nodes: []
+        }),
+        safeFetch<SourceConfig[]>('/api/sources', initialSources),
+        safeFetch<PipelineExecutionStatus | null>('/api/pipeline/status', null)
       ]);
 
-      setBriefings(briefingsRes);
-      setCurrentBriefing(latestBriefingRes);
-      setStories(storiesRes);
-      setPolicies(policiesRes);
-      setResearch(researchRes);
-      setIndicators(indicatorsRes);
-      setConnections(connectionsRes.connections || []);
-      setGraphNodes(connectionsRes.nodes || []);
-      setSources(sourcesRes);
-      setPipelineStatus(statusRes);
+      const anySuccessful = [
+        briefingsRes,
+        latestBriefingRes,
+        storiesRes,
+        policiesRes,
+        researchRes,
+        indicatorsRes,
+        connectionsRes,
+        sourcesRes
+      ].some((r) => r.ok);
+
+      setBriefings(briefingsRes.data);
+      if (latestBriefingRes.data) {
+        setCurrentBriefing(latestBriefingRes.data);
+      }
+      setStories(storiesRes.data);
+      setPolicies(policiesRes.data);
+      setResearch(researchRes.data);
+      setIndicators(indicatorsRes.data);
+      setConnections(connectionsRes.data.connections || initialConnections);
+      setGraphNodes(connectionsRes.data.nodes || []);
+      setSources(sourcesRes.data);
+      if (statusRes.data) {
+        setPipelineStatus(statusRes.data);
+      }
+
+      setSyncStatus(anySuccessful ? 'connected' : 'snapshot');
     } catch (err) {
-      console.error('Failed to load observatory datasets:', err);
+      console.warn('Failed to refresh observatory datasets:', err);
+      setSyncStatus('snapshot');
     }
   }, []);
 
@@ -204,6 +254,26 @@ export default function App() {
           setCurrentTab('macro-markets');
         }}
       />
+
+      {/* Snapshot / Offline Fallback Status Indicator */}
+      {syncStatus === 'snapshot' && (
+        <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-xs text-amber-900 dark:text-amber-200">
+          <div className="max-w-7xl mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              <span>
+                <strong>Archive Snapshot Active:</strong> Displaying verified baseline institutional briefings and indicators while live serverless sync initializes.
+              </span>
+            </div>
+            <button
+              onClick={() => loadData()}
+              className="px-2.5 py-1 text-xs font-semibold bg-amber-600 text-white rounded hover:bg-amber-700 cursor-pointer transition-colors"
+            >
+              Retry Live Sync
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Main View Area */}
       <main className="flex-1">

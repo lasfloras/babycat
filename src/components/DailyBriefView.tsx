@@ -21,8 +21,26 @@ export const DailyBriefView: React.FC<DailyBriefViewProps> = ({
 }) => {
   if (!briefing) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-12 text-center text-stone-500">
-        Loading today's briefing...
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <div className="p-8 border border-stone-200 dark:border-stone-800 rounded-lg bg-stone-100/50 dark:bg-stone-900/50 space-y-4">
+          <div className="inline-flex p-3 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300">
+            <AlertCircle className="w-6 h-6 animate-pulse" />
+          </div>
+          <h2 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100">
+            Initializing Daily Economic Briefing
+          </h2>
+          <p className="text-sm text-stone-600 dark:text-stone-400 max-w-md mx-auto">
+            Retrieving today's classified macro bulletins, institutional policy trackers, and theoretical frameworks.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-stone-900 rounded hover:bg-stone-800 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200 cursor-pointer"
+            >
+              Refresh Observatory
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

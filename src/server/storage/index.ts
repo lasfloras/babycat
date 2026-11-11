@@ -22,38 +22,86 @@ import {
 
 const DATA_DIR = path.resolve(process.cwd(), 'data');
 
+// In-memory cache to guarantee persistence within container lifetime
+// and eliminate read-only filesystem crashes (EROFS) on serverless platforms like Vercel
+const memoryCache = new Map<string, any>();
+
 function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+  } catch (err) {
+    // Expected on read-only environments such as Vercel Lambda
   }
 }
 
 function readJsonFile<T>(filename: string, fallback: T): T {
-  ensureDataDir();
+  // 1. Check in-memory cache first
+  if (memoryCache.has(filename)) {
+    return memoryCache.get(filename) as T;
+  }
+
+  // 2. Try reading from /tmp/data (if modified in previous call on serverless)
+  const tmpPath = path.join('/tmp', 'data', filename);
+  try {
+    if (fs.existsSync(tmpPath)) {
+      const content = fs.readFileSync(tmpPath, 'utf-8');
+      if (content.trim()) {
+        const parsed = JSON.parse(content) as T;
+        memoryCache.set(filename, parsed);
+        return parsed;
+      }
+    }
+  } catch {
+    // Ignore /tmp read error
+  }
+
+  // 3. Try reading from bundled repository data/ directory
   const filePath = path.join(DATA_DIR, filename);
   try {
-    if (!fs.existsSync(filePath)) {
-      writeJsonFile(filename, fallback);
-      return fallback;
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf-8');
+      if (content.trim()) {
+        const parsed = JSON.parse(content) as T;
+        memoryCache.set(filename, parsed);
+        return parsed;
+      }
     }
-    const content = fs.readFileSync(filePath, 'utf-8');
-    if (!content.trim()) {
-      writeJsonFile(filename, fallback);
-      return fallback;
-    }
-    return JSON.parse(content) as T;
   } catch (err) {
-    console.error(`Error reading ${filename}, falling back to initial:`, err);
-    return fallback;
+    console.warn(`[Storage] Read error for ${filename}, falling back to initial data:`, (err as Error).message);
   }
+
+  // 4. Cache fallback in memory and return (never attempt write on read)
+  memoryCache.set(filename, fallback);
+  return fallback;
 }
 
 function writeJsonFile<T>(filename: string, data: T): void {
-  ensureDataDir();
-  const filePath = path.join(DATA_DIR, filename);
-  const tempPath = `${filePath}.tmp`;
-  fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tempPath, filePath);
+  // 1. Always update memory cache immediately
+  memoryCache.set(filename, data);
+
+  // 2. Try to write to project DATA_DIR (works locally, in Docker, and in GitHub Actions)
+  try {
+    ensureDataDir();
+    const filePath = path.join(DATA_DIR, filename);
+    const tempPath = `${filePath}.${Date.now()}.tmp`;
+    fs.writeFileSync(tempPath, JSON.stringify(data, null, 2), 'utf-8');
+    fs.renameSync(tempPath, filePath);
+    return;
+  } catch (err) {
+    // 3. Fallback for read-only filesystem (Vercel serverless): write to writable /tmp/data
+    try {
+      const tmpDir = path.join('/tmp', 'data');
+      if (!fs.existsSync(tmpDir)) {
+        fs.mkdirSync(tmpDir, { recursive: true });
+      }
+      const tmpFilePath = path.join(tmpDir, filename);
+      fs.writeFileSync(tmpFilePath, JSON.stringify(data, null, 2), 'utf-8');
+    } catch (tmpErr) {
+      console.warn(`[Storage] Fallback /tmp write failed for ${filename}:`, (tmpErr as Error).message);
+    }
+  }
 }
 
 export class StorageManager {

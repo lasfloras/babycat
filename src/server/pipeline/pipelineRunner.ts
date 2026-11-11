@@ -29,18 +29,23 @@ export class PipelineRunner {
     });
 
     try {
-      // Stage 1: Fetch new source material
+      // Stage 1: Fetch new source material in parallel
       log('Stage 1: Fetching sources from configured RSS and API endpoints');
       const sources = StorageManager.getSources().filter((s) => s.active);
       const rawArticles: RawArticleItem[] = [];
 
-      for (const source of sources) {
-        log(`Querying ${source.name} (${source.jurisdiction})...`);
-        const items = await FeedFetcher.fetchSource(source);
+      const fetchResults = await Promise.all(
+        sources.map(async (source) => {
+          log(`Querying ${source.name} (${source.jurisdiction})...`);
+          const items = await FeedFetcher.fetchSource(source);
+          source.lastChecked = new Date().toISOString();
+          source.itemCount = items.length;
+          StorageManager.saveSource(source);
+          return items;
+        })
+      );
+      for (const items of fetchResults) {
         rawArticles.push(...items);
-        source.lastChecked = new Date().toISOString();
-        source.itemCount = items.length;
-        StorageManager.saveSource(source);
       }
       log(`Total raw items gathered: ${rawArticles.length}`);
 
@@ -70,12 +75,12 @@ export class PipelineRunner {
 
       // Stage 6 & 7: Analyse selected stories using Gemini API and validate output
       log('Stage 6 & 7: Analyzing stories with Gemini API and validating structured schemas');
-      const newAnalyzedStories: EconomicStory[] = [];
-      for (const cand of selectedForAnalysis) {
-        log(`Analyzing: "${cand.title.slice(0, 60)}..."`);
-        const analyzed = await StoryAnalyzer.analyzeCandidate(cand);
-        newAnalyzedStories.push(analyzed);
-      }
+      const newAnalyzedStories = await Promise.all(
+        selectedForAnalysis.map(async (cand) => {
+          log(`Analyzing: "${cand.title.slice(0, 60)}..."`);
+          return await StoryAnalyzer.analyzeCandidate(cand);
+        })
+      );
 
       // Stage 9: Update relationships with previously stored stories
       log('Stage 9: Identifying economic connections, theoretical links, and historical analogies');
